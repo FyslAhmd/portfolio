@@ -45,15 +45,15 @@
 
     <script src="./matter.js" defer></script>
   </head>
-  <body class="bg-[#111] text-white font-['Nunito']">
+  <body class="bg-[#111] text-white font-['Nunito'] max-w-screen-xl mx-auto">
     <!-- header and hero -->
     <section class="flex flex-col justify-between h-screen">
       <header
-        class="z-10 pointer-events-none flex items-center justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto"
+        class="pointer-events-none flex items-center justify-between w-full px-4 mt-4 mx-auto z-[100]"
       >
         <img src="assets/logo/f11.png" class="w-16" alt="" />
         <div class="flex gap-4 pointer-events-auto">
-          <svg
+          <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -74,7 +74,7 @@
             <line x1="21" y1="12" x2="23" y2="12"></line>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
+          </svg> -->
           <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -134,108 +134,93 @@
 
       <div class="absolute inset-0 hidden md:block" id="wrapper-canvas"></div>
 
-      <div class="flex -mt-10 relative">
-        <div class="w-full px-4 max-w-screen-xl mx-auto">
-          <!-- <svg
-            viewBox="0 0 406 368"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="pointer-events-none absolute top-0 left-1/2 -translate-y-[80px] sm:-translate-y-[180px] -translate-x-1/2 w-[300px] sm:w-[400px] md:w-[650px]"
-          >
-            <path
-              d="M314.899 203.5L314.899 349.43L162.5 209.053M314.899 203.5L283.037 203.586M314.899 203.5L337.881 203.586L381 171.109L314.899 171.109M162.5 209.053L118.044 170.96L157.5 171.109M162.5 209.053L65.5 301.465L20.5595 301.465L137.482 189.156M200.5 171.109L283.037 96.5L283.037 171.109M200.5 171.109L283.037 171.109M200.5 171.109L157.5 171.109M283.037 203.586L210.846 203.123L283.037 271.086L283.037 203.586ZM283.037 171.109L314.899 171.109M157.5 171.109L316.135 20.4322L314.899 171.109"
-              stroke="#1F2667"
-              stroke-opacity="0.9"
-              stroke-width="10"
+      <div class="flex items-center -mt-10 relative mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="w-full px-4 mx-auto">
+            <img
+              src="assets/logo/f14.png"
+              alt=""
+              class="pointer-events-none absolute top-30 left-1/2 -translate-y-[80px] sm:-translate-y-[180px] -translate-x-1/2 w-[300px] sm:w-[400px] md:w-[650px] opacity-30"
             />
-            <path
-              d="M314.899 203.5L314.899 349.43L162.5 209.053M314.899 203.5L283.037 203.586M314.899 203.5L337.881 203.586L381 171.109L314.899 171.109M162.5 209.053L118.044 170.96L157.5 171.109M162.5 209.053L65.5 301.465L20.5595 301.465L137.482 189.156M200.5 171.109L283.037 96.5L283.037 171.109M200.5 171.109L283.037 171.109M200.5 171.109L157.5 171.109M283.037 203.586L210.846 203.123L283.037 271.086L283.037 203.586ZM283.037 171.109L314.899 171.109M157.5 171.109L316.135 20.4322L314.899 171.109"
-              stroke="url(#paint0_linear)"
-              stroke-width="10"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear"
-                x1="205.549"
-                y1="20.0169"
-                x2="204.338"
-                y2="342.461"
-                gradientUnits="userSpaceOnUse"
+            <div class="relative ml-4 md:ml-12 z-[100]">
+              <h1
+                class="pointer-events-none text-3xl md:text-5xl font-['Spartan'] mr-12"
               >
-                <stop stop-color="#1595B6" />
-                <stop offset="1" stop-color="#1595B6" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-          </svg> -->
-          <img
-            src="assets/logo/f14.png"
-            alt=""
-            class="pointer-events-none absolute top-0 left-1/2 -translate-y-[80px] sm:-translate-y-[180px] -translate-x-1/2 w-[300px] sm:w-[400px] md:w-[650px] opacity-50"
-          />
-          <div class="relative ml-4 md:ml-12">
-            <h1
-              class="pointer-events-none text-4xl md:text-[64px] font-['Spartan'] mr-12"
-            >
-              Faysal Ahmad
-            </h1>
-            <p
-              class="pointer-events-none font-['Merriweather'] italic my-4 md:my-8"
-            >
-              MERN Stack Developer
-            </p>
-            <a href="#aboutMe">
-              <button
-                class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group"
+                Faysal Ahmad
+              </h1>
+              <p
+                class="pointer-events-none font-['Merriweather'] italic my-4 md:my-8"
               >
-                About Me
-                <svg
-                  xmlns:dc="http://purl.org/dc/elements/1.1/"
-                  xmlns:cc="http://creativecommons.org/ns#"
-                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                  xmlns:svg="http://www.w3.org/2000/svg"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                  version="1.1"
-                  x="0px"
-                  y="0px"
-                  width="44"
-                  height="44"
-                  viewBox="0 0 100 100"
-                  class="absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100"
+                MERN Stack Developer
+              </p>
+              <a href="./assets/FaysalAhmad.pdf" download>
+                <button
+                  class="bg-[#4595eb] py-2 px-5 mr-5 mb-6 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] hover:scale-110 ease-in-out duration-100"
                 >
-                  <g transform="translate(0,-952.36218)">
-                    <path
-                      style="
-                        text-indent: 0;
-                        text-transform: none;
-                        direction: ltr;
-                        block-progression: tb;
-                        baseline-shift: baseline;
-                        color: #000000;
-                        enable-background: accumulate;
-                      "
-                      d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
-                      fill="#fff"
-                      fill-opacity="1"
-                      stroke="white"
-                      stroke-width="2"
-                      marker="none"
-                      visibility="visible"
-                      display="inline"
-                      overflow="visible"
-                    />
-                  </g>
-                </svg>
-              </button>
-            </a>
+                  Download CV
+                </button>
+              </a>
+              <a href="#aboutMe">
+                <button
+                  class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group"
+                >
+                  About Me
+                  <svg
+                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:cc="http://creativecommons.org/ns#"
+                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                    xmlns:svg="http://www.w3.org/2000/svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    width="44"
+                    height="44"
+                    viewBox="0 0 100 100"
+                    class="absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100"
+                  >
+                    <g transform="translate(0,-952.36218)">
+                      <path
+                        style="
+                          text-indent: 0;
+                          text-transform: none;
+                          direction: ltr;
+                          block-progression: tb;
+                          baseline-shift: baseline;
+                          color: #000000;
+                          enable-background: accumulate;
+                        "
+                        d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                        fill="#fff"
+                        fill-opacity="1"
+                        stroke="white"
+                        stroke-width="2"
+                        marker="none"
+                        visibility="visible"
+                        display="inline"
+                        overflow="visible"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="z-[50]">
+            <img
+              src="./assets/images/HeroImg3.png"
+              alt=""
+              class="pr-20 w-[500px] xl:w-[700px]"
+            />
           </div>
         </div>
 
-        <ul class="ml-auto space-y-6 text-[#b0b2c3] absolute right-8">
+        <ul class="ml-auto space-y-6 text-[#b0b2c3] absolute right-8 z-[100]">
           <li>
             <a
-              href="https://www.linkedin.com/in/faysalahmedpatwary/"
+              href="https://www.linkedin.com/in/faysal-ahmad-patwary/"
               target="_blank"
             >
               <svg
@@ -367,15 +352,283 @@
     </section>
 
     <!-- project section -->
-    <section
-      id="allWorkSection"
-      class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16"
-    >
+    <section id="allWorkSection" class="mx-auto px-4 relative pb-8 sm:pb-16">
       <h2
         class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]"
       >
         Latest Works
       </h2>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative"
+      >
+        <div
+          class="h-[1px] left-1/4 right-1/2 bg-[#1788ae] absolute top-1/2 hidden sm:block"
+        ></div>
+        <a
+          href="https://histotrack1.web.app/"
+          target="_blank"
+          class="w-4 h-4 rounded-full border-[3px] border-[#fc815c] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"
+        ></a>
+        <a
+          href="https://histotrack1.web.app/"
+          target="_blank"
+          class="flex w-full relative justify-center sm:justify-start"
+        >
+          <div
+            class="flex flex-col items-center relative group hover:scale-105 ease-in-out sm:mr-auto duration-200"
+          >
+            <img
+              class="max-w-[400px] w-full mr-auto relative z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
+              src="assets/project/histoTrack.png"
+              alt=""
+            />
+            <span
+              class="font-semibold flex group-hover:-top-14 ease-jump duration-200 bg-[#fc815c] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
+              >Histo Track
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-external-link"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <div class="w-full">
+          <h3 class="text-[#fc815c] font-bold text-2xl md:text-4xl">
+            Histo Track
+          </h3>
+          <span class="text-[#fc815c] text-base md:text-lg"
+            >(Historical Artifacts Web)</span
+          >
+          <p class="text-justify text-sm md:text-base mt-2">
+            HistoTrack, a full-stack web application that enables users to
+            authenticate, manage and explore historical artifacts with features
+            like liking, editing, and personalized viewing, all within a dynamic
+            and user-friendly interface.
+          </p>
+
+          <ul class="flex flex-wrap gap-2 mt-2">
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #html
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #css
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #tailwind
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #daisyui
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #javascript
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #react.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #firebase host
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #firebase authentication
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #framer motion
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #node.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #express.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #mongoDB
+            </li>
+          </ul>
+          <div class="text-center">
+            <button
+              class="my-4 border px-4 py-2 rounded-full hover:bg-[#fc815c] hover:text-black"
+            >
+              <a
+                href="https://github.com/FyslAhmd/histo-track-client"
+                target="_blank"
+                >Github Repo</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative"
+      >
+        <div class="order-2 sm:order-1 w-full">
+          <h3 class="text-[#47afa1] font-bold text-2xl md:text-4xl">
+            Find My Roomie
+          </h3>
+          <span class="text-[#47afa1] text-base md:text-lg"
+            >(Roommate Finder Web)</span
+          >
+          <p class="text-justify text-sm md:text-base mt-2">
+            FindMyRoomie, a web application that helps users easily find
+            roommates or post available rooms, offering personalized listings,
+            search functionality, and a seamless user experience for hassle-free
+            room sharing.
+          </p>
+
+          <ul class="flex flex-wrap gap-2 mt-2">
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #html
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #css
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #tailwind
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #daisyui
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #javascript
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #react.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #firebase host
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #firebase authentication
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #node.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #express.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #mongoDB
+            </li>
+          </ul>
+          <div class="text-center">
+            <button
+              class="my-4 border px-4 py-2 rounded-full hover:bg-[#47afa1] hover:text-black"
+            >
+              <a
+                href="https://github.com/FyslAhmd/find-roomie-client"
+                target="_blank"
+                >Github Repo</a
+              >
+            </button>
+          </div>
+        </div>
+        <div
+          class="h-[1px] left-1/2 right-1/4 bg-[#1788ae] absolute top-1/2 hidden sm:block"
+        ></div>
+        <a
+          href="https://roommate-finder-3632.web.app/"
+          target="_blank"
+          class="w-4 h-4 rounded-full border-[3px] border-[#47afa1] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"
+        ></a>
+        <a
+          href="https://roommate-finder-3632.web.app/"
+          target="_blank"
+          class="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start"
+        >
+          <div
+            class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto"
+          >
+            <img
+              class="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
+              src="assets/project/roommate.png"
+              alt=""
+            />
+            <span
+              class="font-semibold flex group-hover:-top-14 ease-jump duration-200 bg-[#47afa1] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
+              >Find My Roomie
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-external-link"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
 
       <div
         class="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[80px] items-center sm:mt-20 relative"
@@ -487,6 +740,15 @@
               #figma
             </li>
           </ul>
+          <div class="text-center">
+            <button
+              class="my-4 border px-4 py-2 rounded-full hover:bg-[#459bd5] hover:text-black"
+            >
+              <a href="https://github.com/FyslAhmd/" target="_blank"
+                >Github Repo</a
+              >
+            </button>
+          </div>
         </div>
       </div>
 
@@ -553,6 +815,15 @@
               #figma
             </li>
           </ul>
+          <div class="text-center">
+            <button
+              class="my-4 border px-4 py-2 rounded-full hover:bg-[#ffe578] hover:text-black"
+            >
+              <a href="https://github.com/FyslAhmd/dragon-news" target="_blank"
+                >Github Repo</a
+              >
+            </button>
+          </div>
         </div>
         <div
           class="h-[1px] left-1/2 right-1/4 bg-[#1788ae] absolute top-1/2 hidden sm:block"
@@ -703,213 +974,15 @@
               #figma
             </li>
           </ul>
-        </div>
-      </div>
-
-      <div
-        class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative"
-      >
-        <div class="order-2 sm:order-1 w-full">
-          <h3 class="text-[#47afa1] font-bold text-2xl md:text-4xl">
-            Boi Poka
-          </h3>
-          <span class="text-[#47afa1] text-base md:text-lg"
-            >(eBook Website)</span
-          >
-          <p class="text-justify text-sm md:text-base mt-2">
-            Explore a vast collection of digital books on our eBook website,
-            covering every genre and interest. Read anytime, anywhere with
-            instant access to your favorite titles.
-          </p>
-
-          <ul class="flex flex-wrap gap-2 mt-2">
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+          <div class="text-center">
+            <button
+              class="my-4 border px-4 py-2 rounded-full hover:bg-[#fc815c] hover:text-black"
             >
-              #html
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #css
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #tailwind
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #daisyui
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #javascript
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #react.js
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #netlify
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #figma
-            </li>
-          </ul>
-        </div>
-        <div
-          class="h-[1px] left-1/2 right-1/4 bg-[#1788ae] absolute top-1/2 hidden sm:block"
-        ></div>
-        <a
-          href="https://boii-pokaa.netlify.app/"
-          target="_blank"
-          class="w-4 h-4 rounded-full border-[3px] border-[#47afa1] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"
-        ></a>
-        <a
-          href="https://boii-pokaa.netlify.app/"
-          target="_blank"
-          class="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start"
-        >
-          <div
-            class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto"
-          >
-            <img
-              class="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
-              src="assets/project/boi-poka.png"
-              alt=""
-            />
-            <span
-              class="font-semibold flex group-hover:-top-14 ease-jump duration-200 bg-[#47afa1] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
-              >Boi Poka
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-external-link"
+              <a href="https://github.com/FyslAhmd" target="_blank"
+                >Github Repo</a
               >
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </span>
+            </button>
           </div>
-        </a>
-      </div>
-
-      <div
-        class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative"
-      >
-        <div
-          class="h-[1px] left-1/4 right-1/2 bg-[#1788ae] absolute top-1/2 hidden sm:block"
-        ></div>
-        <a
-          href="https://english-janla.netlify.app/"
-          target="_blank"
-          class="w-4 h-4 rounded-full border-[3px] border-[#fc815c] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"
-        ></a>
-        <a
-          href="https://english-janla.netlify.app/"
-          target="_blank"
-          class="flex w-full relative justify-center sm:justify-start"
-        >
-          <div
-            class="flex flex-col items-center relative group hover:scale-105 ease-in-out sm:mr-auto duration-200"
-          >
-            <img
-              class="max-w-[400px] w-full mr-auto relative z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
-              src="assets/project/english-janala.png"
-              alt=""
-            />
-            <span
-              class="font-semibold flex group-hover:-top-14 ease-jump duration-200 bg-[#fc815c] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
-              >English Janala
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-external-link"
-              >
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </span>
-          </div>
-        </a>
-        <div class="w-full">
-          <h3 class="text-[#fc815c] font-bold text-2xl md:text-4xl">
-            English Janala
-          </h3>
-          <span class="text-[#fc815c] text-base md:text-lg"
-            >(Learning Website)</span
-          >
-          <p class="text-justify text-sm md:text-base mt-2">
-            Learn English words easily with our website, featuring clear Bangla
-            meanings for better understanding. Build your vocabulary daily with
-            simple, effective word explanations and examples.
-          </p>
-
-          <ul class="flex flex-wrap gap-2 mt-2">
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #html
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #css
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #tailwind
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #daisyui
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #javascript
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #netlify
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #figma
-            </li>
-          </ul>
         </div>
       </div>
 
@@ -918,7 +991,7 @@
       ></div>
     </section>
 
-    <!-- <section class="max-w-screen-xl mx-auto pb-12">
+    <!-- <section class=" mx-auto pb-12">
       <h2
         class="text-3xl sm:text-[40px] bg-[#111] sm:w-max relative z-10 font-bold px-4 py-2 mx-auto text-center text-[#1788ae] sm:border-2 border-[#1788ae] rounded-md"
       >
@@ -1024,9 +1097,9 @@
 
     <section id="aboutMe">
       <div
-        class="flex flex-col-reverse md:flex-row md:justify-between md:items-center md:max-w-screen-xl mx-auto my-20 bg-[#191919] rounded-lg py-10"
+        class="flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center mx-auto my-20 bg-[#191919] rounded-lg py-10"
       >
-        <div class="px-4 md:px-20 space-y-6">
+        <div class="flex-1 px-4 lg:px-20 space-y-6">
           <h3 class="text-[#1788ae] text-xl md:text-4xl font-bold">ABOUT ME</h3>
           <p class="md:text-lg font-medium text-justify">
             My goal is to excel as a front-end developer by utilizing my skills
@@ -1041,22 +1114,7 @@
             <li
               class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
             >
-              #html
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #css
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
               #tailwindcss
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #bootstrap
             </li>
             <li
               class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
@@ -1091,32 +1149,12 @@
             <li
               class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
             >
-              #mongoose
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #cloudinary
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
               #git
             </li>
             <li
               class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
             >
               #github
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #adobeXD
-            </li>
-            <li
-              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
-            >
-              #terminal
             </li>
             <li
               class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
@@ -1151,18 +1189,160 @@
             </div>
           </section>
         </div>
-        <div>
-          <img class="md:max-w-2xl" src="assets/images/coder.svg" alt="" />
+        <div class="flex-1">
+          <img class="hidden lg:block" src="assets/images/coder.svg" alt="" />
         </div>
       </div>
     </section>
 
-    <section class="max-w-screen-xl mx-auto px-4 pb-12">
+    <section id="skills" class="bg-[#111] pb-16">
+      <h2 class="text-4xl font-bold text-center text-[#1788ae] mb-8">
+        My Skills
+      </h2>
+
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Frontend Skills -->
+          <div class="bg-[#222] p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl text-[#1788ae] font-semibold mb-4">Frontend</h3>
+            <div class="mb-4">
+              <label for="html" class="block text-lg text-[#b0b2c3]"
+                >HTML</label
+              >
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="html"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="css" class="block text-lg text-[#b0b2c3]">Tailwind</label>
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="css"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 80%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="js" class="block text-lg text-[#b0b2c3]"
+                >JavaScript</label
+              >
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="js"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 80%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="react" class="block text-lg text-[#b0b2c3]"
+                >React.js</label
+              >
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="react"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 80%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="bg-[#222] p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl text-[#1788ae] font-semibold mb-4">Backend</h3>
+            <div class="mb-4">
+              <label for="node" class="block text-lg text-[#b0b2c3]"
+                >Node.js</label
+              >
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="node"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 40%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="express" class="block text-lg text-[#b0b2c3]"
+                >Express.js</label
+              >
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="express"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 40%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="mongo" class="block text-lg text-[#b0b2c3]"
+                >MongoDB</label
+              >
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="mongo"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 55%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools Skills -->
+          <div class="bg-[#222] p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl text-[#1788ae] font-semibold mb-4">Tools</h3>
+            <div class="mb-4">
+              <label for="git" class="block text-lg text-[#b0b2c3]">Git</label>
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="git"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 85%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="github" class="block text-lg text-[#b0b2c3]"
+                >GitHub</label
+              >
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="github"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 85%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="figma" class="block text-lg text-[#b0b2c3]"
+                >Figma</label
+              >
+              <div class="w-full bg-[#444] h-2 rounded-full">
+                <div
+                  id="figma"
+                  class="bg-[#4595eb] h-2 rounded-full"
+                  style="width: 40%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto px-4 pb-12">
       <h2
         class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-2 border-[#1788ae] rounded-md"
       >
         Let's Connect
       </h2>
+      <p></p>
       <div class="flex flex-col md:flex-row items-center mt-10">
         <div class="w-full">
           <img src="./assets/images/contact-me.svg" alt="phone" />
@@ -1234,7 +1414,7 @@
               id="email"
               name="email"
               class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-              placeholder="name@procodrr.com"
+              placeholder="email@gmail.com"
             />
           </div>
           <label
